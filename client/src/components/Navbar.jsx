@@ -6,33 +6,8 @@ const Navbar = () => {
    // const [isLoggedIn, setIsLoggedIn] = useState(false);
     const navigate = useNavigate();
     const isLoggedIn = !!localStorage.getItem('token');
-    /* useEffect(() => {
-        // Check token to determine login state whenever component renders
-        const token = localStorage.getItem('token');
-        setIsLoggedIn(!!token); // Update login state based on token presence
-    }, [isLoggedIn]); // Depend on isLoggedIn to re-run when it changes
- */
-
-    /*  useEffect(() => {
-        // Listen for changes to localStorage (e.g., token changes)
-        const handleStorageChange = () => {
-            setIsLoggedIn(!!localStorage.getItem('token'));
-        };
-
-        window.addEventListener('storage', handleStorageChange);
-
-        return () => {
-            window.removeEventListener('storage', handleStorageChange);
-        };
-    }, []); */
- 
-   /*  const handleLogin = () => {
-        setIsLoggedIn(true);
-    }; */
-
-   
-
-
+    
+    
     const handleLogout = () => {
         localStorage.removeItem('token'); // Remove the token on logout
         //setIsLoggedIn(false); // Update login state

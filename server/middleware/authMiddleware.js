@@ -16,4 +16,24 @@ const authMiddleware = (req, res, next) => {
   }
 };
 
+
+/* const oldSecret = process.env.OLD_JWT_SECRET;
+const currentSecret = process.env.JWT_SECRET;
+
+jwt.verify(token, currentSecret, (err, decoded) => {
+  if (err && oldSecret) {
+    // Try verifying with the old secret
+    jwt.verify(token, oldSecret, (err, decodedOld) => {
+      if (decodedOld) {
+        console.log("Token verified with old secret.");
+      } else {
+        return res.status(401).json({ error: "Invalid token." });
+      }
+    });
+  } else if (!err) {
+    console.log("Token verified with current secret.");
+  } else {
+    return res.status(401).json({ error: "Invalid token." });
+  }
+}); */
 module.exports = authMiddleware;

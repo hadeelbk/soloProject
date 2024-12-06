@@ -85,7 +85,7 @@ const AdminPetList = () => {
       formData.append("upload_preset", "petAdopt");
 
       const cloudinaryRes = await axios.post(
-        "https://api.cloudinary.com/v1_1/hadil/image/upload",
+        process.env.CLOUDINARY_URL,
         formData
       );
 
