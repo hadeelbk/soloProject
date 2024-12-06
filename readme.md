@@ -2,6 +2,8 @@
 
 PetAdopt is a web application that connects animal shelters with adopters. It provides an easy-to-use platform for users to browse available pets, view shelter details, and add pets to their favorites. Shelters can manage pet listings and communicate with potential adopters. The app aims to streamline the adoption process and help pets find loving homes.
 
+quick demo:https://youtu.be/daxerr8_VXA?si=FNyuhZ6dinvD2Ld6
+
 # key features:
 	•	Browse pets available for adoption
 	•	Add and remove favorites
@@ -53,5 +55,5 @@ Prerequisites
 	•	Others: Axios.   
 
 	
-	quick demo:https://youtu.be/daxerr8_VXA?si=FNyuhZ6dinvD2Ld6
+	
 
