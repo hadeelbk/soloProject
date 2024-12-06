@@ -160,16 +160,6 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-/* 
-  mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(async () => {
-        await mongoose.connection.db.dropCollection('pets');
-        console.log('Dropped pets collection');
-        mongoose.connection.close();
-    })
-    .catch(error => console.error('Error dropping collection:', error));     
- */
-
 // MongoDB connection and mock data insertion
 mongoose
   .connect(process.env.MONGODB_URI, {
