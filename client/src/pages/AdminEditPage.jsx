@@ -12,7 +12,7 @@ const AdminEditPage = () => {
   });
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
-  const [imageFile, setImageFile] = useState(null); // State for the image file
+  const [imageFile, setImageFile] = useState(null); 
   const userRole = localStorage.getItem("role");
 
   useEffect(() => {
@@ -52,7 +52,7 @@ const AdminEditPage = () => {
         formData.append("upload_preset", "petAdopt");
 
         const uploadResponse = await axios.post(
-          "https://api.cloudinary.com/v1_1/hadil/image/upload",
+          process.env.CLOUDINARY_URL,
           formData
         );
 
@@ -67,7 +67,7 @@ const AdminEditPage = () => {
         }
       );
 
-      navigate(`/pets/${id}`); // Redirect back to details page after update
+      navigate(`/pets/${id}`);
     } catch (error) {
       console.error("Error updating pet:", error);
     }

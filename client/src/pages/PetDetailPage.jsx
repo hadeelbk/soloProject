@@ -12,7 +12,7 @@ const PetDetailPage = () => {
   const { id } = useParams();
   const [pet, setPet] = useState(null);
   const [cityName, setCityName] = useState(""); // State to store the city name
-  const [isFavorite, setIsFavorite] = useState(false); // State to manage favorite status
+  const [isFavorite, setIsFavorite] = useState(false); 
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
   const userRole = localStorage.getItem("role");

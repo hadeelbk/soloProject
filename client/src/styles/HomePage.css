@@ -27,11 +27,10 @@ header h1 {
   cursor: pointer;
   border-color: #a6e4e7;
   border-radius: 4px;
-  
 }
 
-.feature button:hover{
-    background-color: rgb(225, 227, 228);
+.feature button:hover {
+  background-color: rgb(225, 227, 228);
 }
 
 .dashboard-image {

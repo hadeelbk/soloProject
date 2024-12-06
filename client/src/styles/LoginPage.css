@@ -1,14 +1,14 @@
 .login-page {
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   height: 100vh; /* Full viewport height */
   background-color: #f9f9f9;
 }
 
 .login-form {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   max-width: 300px;
   width: 100%;
   padding: 20px 20px 40px 20px;
@@ -22,7 +22,7 @@
 }
 
 .form-group input {
-  width: 100%; 
+  width: 100%;
   padding: 10px;
   box-sizing: border-box;
   border: 1px solid #ccc;

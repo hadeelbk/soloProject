@@ -6,12 +6,10 @@ const authRoutes = require("./routes/auth");
 const petRoutes = require("./routes/pets");
 const contactRoutes = require("./routes/contact");
 const dashboardRoutes = require("./routes/dashboard");
-const favoriteRoutes =require("./routes/favorite")
+const favoriteRoutes = require("./routes/favorite");
 const Pet = require("./models/Pet");
 
-
-   
-  const mockPets = [
+const mockPets = [
   {
     name: "Buddy",
     type: "Dog",
@@ -19,8 +17,8 @@ const Pet = require("./models/Pet");
     location: { lat: 51.5074, lng: -0.1278 },
     city: "London",
     shelterName: "Together",
-     phone: "123456789",
-     email:"together@gmail.com",
+    phone: "123456789",
+    email: "together@gmail.com",
     image: "/images/buddy.jpg",
     gender: "Male",
     favorite: false,
@@ -32,8 +30,8 @@ const Pet = require("./models/Pet");
     location: { lat: 51.5074, lng: -0.1278 },
     city: "London",
     shelterName: "Together",
-    phone: "123456789" ,
-    email:"together@gmail.com",
+    phone: "123456789",
+    email: "together@gmail.com",
     image: "/images/luci.jpg",
     gender: "Female",
     favorite: false,
@@ -45,8 +43,8 @@ const Pet = require("./models/Pet");
     location: { lat: 53.483959, lng: -2.244644 },
     city: "Manchester",
     shelterName: "Adoption Centre",
-     phone: "123456789",
-     email:"adopt@gmail.com" ,
+    phone: "123456789",
+    email: "adopt@gmail.com",
     image: "/images/tom.jpg",
     gender: "Male",
     favorite: false,
@@ -57,9 +55,9 @@ const Pet = require("./models/Pet");
     age: 1,
     location: { lat: 55.9533, lng: -3.1883 },
     city: "Edinburgh",
-    sshelterName:"Lives", 
+    sshelterName: "Lives",
     phone: "123456789",
-    email:"lives@gmail.com" ,
+    email: "lives@gmail.com",
     image: "/images/fluffy.jpg",
     gender: "Male",
     favorite: false,
@@ -71,8 +69,8 @@ const Pet = require("./models/Pet");
     location: { lat: 52.4862, lng: -1.8904 },
     city: "Birmingham",
     shelterName: "Bham Pets",
-     phone: "123456789",
-     email:"bham@gemail.com" ,
+    phone: "123456789",
+    email: "bham@gemail.com",
     image: "/images/charlie.jpg",
     gender: "Male",
     favorite: false,
@@ -83,9 +81,9 @@ const Pet = require("./models/Pet");
     age: 2,
     location: { lat: 51.4545, lng: -2.5879 },
     city: "Bristol",
-    shelterName: "Your Pet", 
+    shelterName: "Your Pet",
     phone: "123456789",
-    email:"your@gmail.com",
+    email: "your@gmail.com",
     image: "/images/bella.jpg",
     gender: "Female",
     favorite: false,
@@ -96,9 +94,9 @@ const Pet = require("./models/Pet");
     age: 4,
     location: { lat: 53.4084, lng: -2.9916 },
     city: "Liverpool",
-   shelterName:"Together in Liverpool",
-     phone: "123456789",
-     email:"togetherliverpool@gmail.com",
+    shelterName: "Together in Liverpool",
+    phone: "123456789",
+    email: "togetherliverpool@gmail.com",
     image: "/images/violla.jpg",
     gender: "Female",
     favorite: false,
@@ -109,9 +107,9 @@ const Pet = require("./models/Pet");
     age: 4,
     location: { lat: 51.752, lng: -1.2577 },
     city: "Oxford",
-    shelterName: "Save Lives", 
+    shelterName: "Save Lives",
     phone: "123456789",
-    email:"save@gmail.com",
+    email: "save@gmail.com",
     image: "/images/shadow.jpg",
     gender: "Male",
     favorite: false,
@@ -122,9 +120,9 @@ const Pet = require("./models/Pet");
     age: 2,
     location: { lat: 51.4543, lng: -0.9781 },
     city: "Reading",
-    shelterName: "The Home", 
+    shelterName: "The Home",
     phone: "123456789",
-    email:"home@gmail.com",
+    email: "home@gmail.com",
     image: "/images/snowball.jpg",
     gender: "Female",
     favorite: false,
@@ -135,9 +133,9 @@ const Pet = require("./models/Pet");
     age: 5,
     location: { lat: 52.2053, lng: 0.1218 },
     city: "Cambridge",
-    shelterName: "The Home Cambridge", 
+    shelterName: "The Home Cambridge",
     phone: "123456789",
-    email:"homecambridge@gamil.com",
+    email: "homecambridge@gamil.com",
     image: "/images/rocky.jpg",
     gender: "Male",
     favorite: false,
@@ -148,23 +146,20 @@ const Pet = require("./models/Pet");
     age: 3,
     location: { lat: 53.8008, lng: -1.5491 },
     city: "Leeds",
-   shelterName:"Shelter", 
+    shelterName: "Shelter",
     phone: "123456789",
-    email:"shelter@gamil.com",
+    email: "shelter@gamil.com",
     image: "/images/ginger.jpg",
     gender: "Female",
     favorite: false,
   },
-];   
- 
+];
+
 //middleware
 const app = express();
 app.use(express.json());
 app.use(cors());
 
-
-
- 
 /* 
   mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(async () => {
@@ -175,9 +170,8 @@ app.use(cors());
     .catch(error => console.error('Error dropping collection:', error));     
  */
 
- 
 // MongoDB connection and mock data insertion
-   mongoose
+mongoose
   .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -196,16 +190,14 @@ app.use(cors());
   })
   .catch((error) => {
     console.error("Error connecting to MongoDB:", error.message);
-  });    
-       
+  });
 
 //routes
 app.use("/auth", authRoutes);
 app.use("/pets", petRoutes);
 app.use("/contact", contactRoutes);
 app.use("/dashboard", dashboardRoutes);
-app.use("/favorite",favoriteRoutes)
-
+app.use("/favorite", favoriteRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
