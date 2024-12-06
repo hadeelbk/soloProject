@@ -31,7 +31,7 @@ exports.login = async (req, res) => {
 
 
         // Generate JWT token
-        const token = jwt.sign({ id: user._id, role: user.role }, process.env.JWT_SECRET, { expiresIn: '1d' });
+        const token = jwt.sign({ id: user._id, role: user.role }, process.env.JWT_SECRET, { expiresIn: '1h' });
         res.json({ token, role: user.role });
     } catch (error) {
         res.status(500).json({ error: 'Server error' });
@@ -40,15 +40,3 @@ exports.login = async (req, res) => {
 
     
 
-
-
-
-//http://localhost:3000/api/auth/register
-/* { "email":"whatever@gamil.com", 
-"password":"123456", 
-"role":"adopter" } */
-
-//http://localhost:3000/api/auth/login
-//genrates a JWT (JSON web token)
-/* { "email":"whatever@gamil.com", 
-"password":"123456" } */
