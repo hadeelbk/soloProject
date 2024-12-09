@@ -11,7 +11,7 @@ PetAdopt is a web application designed to connect animal shelters with adopters,
 - ❤️ **Favorites**: Add and remove pets from your favorites list.  
 - 🛠️ **Admin Dashboard**: Manage pet listings with ease.  
 - 🔍 **Advanced Filtering**: Filter pets by type, location, and age.  
-- 📞 **Direct Contact**: Contact shelters directly from pet listings.  
+- 📧 **Direct Contact**: Contact shelters directly from pet listings.  
 
 ---
 
